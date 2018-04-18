@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="Keywords" content="鲍宏庭 个人网站">
+<meta name="Description" content="这是一个个人网站，关于寻找UI设计方面的工作">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/hover.css">
+<script src="js/jquery-1.12.1.min.js" language="javascript"></script>
+<title>Life is not what we are suffering but that of its poems and of its Great Perhaps</title>
+<script>
+	var a=0;
+	
+	$(function(){
+		$(".kk .rows li").hover(function(){
+			$(this).addClass("hover").siblings().removeClass("hover")
+			//alert()
+		var a=$(this).index();
+		$(".pic img").eq(a).show().siblings("img").hide();
+		});
+	function autoplay(){
+		play=setInterval(function(){
+			a++;
+			if(a>5){a=-1;}else{
+			$(".kk .rows li").eq(a).addClass("hover").siblings().removeClass("hover");
+			$(".pic img").eq(a).show().siblings("img").hide();}
+			},2000);	
+		
+	}
+			autoplay();
+	});
+	
+	
+</script>
+</head>
+
+<body>
+<div class="dabox1">
+	<div class="tt">
+		<img src="images/tt2.png" width="100%" height="666" alt="tt">
+	</div>
+	<div class="wz">
+		<img src="images/Bannertt.png" width="600" height="82" alt="wz">
+	</div>
+	
+	<div class="banner" >
+	<div class="pic">
+		<img src="images/banner01.jpg" width="100%" height="800px" alt="">
+		<img src="images/banner02.png" width="100%" height="800px" alt="">
+		<img src="images/banner03.png" width="100%" height="800px" alt="">
+		<img src="images/banner04.png" width="100%" height="800px" alt="">
+	</div>
+	<div class="kk">
+		<ul class="rows">
+			<li class="hover"></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+	<div class="input">
+		<p class="aa">&lt;</p>
+		<p class="dd">&gt;</p>
+	</div>
+</div>
+</div>
+
+
+</body>
+</html>
